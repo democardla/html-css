@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音视频播放</title>
+</head>
+<body>
+    <!-- 
+        通过audio或者video指定路径
+
+        audio 用于在网页中插入音视频文件的标签，但是此时页面中不会出现操作音频视频的操作区域
+            在属性中声明controls，我们就可以在网页中找到控制播放的区域了
+            autoplay -> 设置自动播放
+     -->
+    <audio src="../Source/雲の上の桜花結界.mp3" controls loop>雲の上の桜花結界.mp3</audio>
+    <br>
+    <video src="../Source/【izone】Rumor还是能打，帅炸的舞台一次看过瘾！rumor换装混剪 - 001 - Rumor.mp4" controls width="700">Rumor.mp4</video>
+
+     <!-- 
+        通过source指定路径
+      -->
+      <br>
+      <audio controls >
+        <!-- 
+            如果浏览器可以识别则直接展示该标签
+            如果不能识别，将会忽略标签，但是内部的提示文字不会被忽略，他们会被展示在网页中
+         -->
+        提示文字
+        <!-- 
+            通过这种方法，我们可以指定多个源，浏览器优先使用最前面的播放源，如果不可用，则再采用其他源，可以解决兼容问题
+         -->
+        <source src="../Source/雲の上の桜花結界.mp3">
+        <!-- 
+            不建议使用，但是可以兼容IE8
+         -->
+        <embed src="" type="">
+        </audio>
+
+        <br>
+        <!-- 
+            引入外部的源
+         -->
+        <iframe src="https://www.bilibili.com/video/BV1TN4y1375q?share_source=copy_web&vd_source=fd3676d84983c9a2c7e3cdb9e68d7b51" frameborder="0"></iframe>
+
+        <textarea name="input" id="" cols="30" rows="1">input please</textarea>
+
+
+</body>
+</html>
